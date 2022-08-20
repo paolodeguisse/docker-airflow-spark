@@ -50,7 +50,7 @@ if [ "$AIRFLOW__CORE__EXECUTOR" != "SequentialExecutor" ]; then
     : "${POSTGRES_HOST:="postgres"}"
     : "${POSTGRES_PORT:="5432"}"
     : "${POSTGRES_USER:="airflow"}"
-    : "${POSTGRES_PASSWORD:="airflow"}"
+    : "${POSTGRES_PASSWORD:="airflow2"}"
     : "${POSTGRES_DB:="airflow"}"
     : "${POSTGRES_EXTRAS:-""}"
 
