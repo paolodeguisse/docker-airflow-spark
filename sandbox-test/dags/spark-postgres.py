@@ -14,7 +14,7 @@ ratings_file = "/usr/local/spark/resources/data/ratings.csv"
 postgres_db = "jdbc:postgresql://postgres/test"
 postgres_user = "test"
 postgres_pwd = "postgres"
-
+# postgresql://airflow:airflow2@194.58.97.241:5432/airflow
 ###############################################
 # DAG Definition
 ###############################################
