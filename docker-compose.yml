@@ -18,6 +18,7 @@ services:
     # Airflow LocalExecutor
     airflow-webserver:
         image: docker-airflow2:latest
+        user: root
         restart: always
         networks:
             - default_net
@@ -42,7 +43,7 @@ services:
     # Spark with N workers
     spark-master:
         image: bitnami/spark:3.2.1
-        #user: root # Run container as root container: https://docs.bitnami.com/tutorials/work-with-non-root-containers/
+        user: root # Run container as root container: https://docs.bitnami.com/tutorials/work-with-non-root-containers/
         hostname: spark
         networks:
             - default_net
@@ -61,7 +62,7 @@ services:
 
     spark-workerone:
         image: bitnami/spark:3.2.1
-        #user: root
+        user: root
         networks:
             - default_net
         environment:
@@ -79,7 +80,7 @@ services:
             
     spark-workertwo:
         image: bitnami/spark:3.2.1
-        #user: root
+        user: root
         networks:
             - default_net
         environment:
