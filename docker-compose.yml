@@ -1,5 +1,5 @@
 # Verify volumes
-version: "3.8"
+version: "3.3"
 services:  
     # Postgres used by Airflow
     postgres:
