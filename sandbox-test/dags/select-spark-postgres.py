@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 spark_master = "spark://spark:7077"
 postgres_driver_jar = "/usr/local/spark/resources/postgresql-42.4.2.jar"
 
-postgres_db = "jdbc:postgresql://151.248.122.146:5432/airflow"
+postgres_db = "jdbc:postgresql://80.78.240.121:5432/airflow"
 
 now = datetime.now()
 
