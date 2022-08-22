@@ -9,7 +9,7 @@ spark = SparkSession \
 
 df = spark.read \
     .format("jdbc") \
-    .option("url", "jdbc:postgresql://151.248.122.146:5432/airflow") \
+    .option("url", "jdbc:postgresql://80.78.240.121:5432/airflow") \
     .option("dbtable", "active_clients") \
     .option("user", "airflow") \
     .option("password", "airflow2") \
