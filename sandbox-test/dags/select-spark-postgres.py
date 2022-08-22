@@ -25,7 +25,7 @@ default_args = {
 }
 
 dag = DAG(
-        dag_id="select", 
+        dag_id="select_dag", 
         description="This DAG reads postgres",
         default_args=default_args, 
         schedule_interval=timedelta(1)
@@ -36,7 +36,7 @@ start = DummyOperator(task_id="start", dag=dag)
 
 spark_job_read_postgres = SparkSubmitOperator(
     task_id="spark_job_select",
-    application="/usr/local/spark/app/select.py", # Spark application path created in airflow and spark cluster
+    application="/usr/local/spark/app/select_data.py", # Spark application path created in airflow and spark cluster
     name="select-postgres",
     conn_id="spark_default",
     verbose=1,
